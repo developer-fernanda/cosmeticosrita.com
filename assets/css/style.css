@@ -1,0 +1,175 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+
+/* BACKGROUND PERMISSÃO DE ACESSO E LOGIN*/
+
+#background-principal,
+#background-login {
+    background-image: url('../img/background-login.jpg');
+    /*Ajusta a img do tamanho da tela*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* CONTEÚDO PERMISSÃO DE ACESSO*/
+
+#conteudo {
+    position: absolute;
+    padding: 50px;
+    padding-top: 150px;
+    width: 800px;
+    height: 400px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-decoration: none;
+}
+
+
+/* BOTÃO PERMISSÃO DE ACESSO*/
+
+.btn-conteudo {
+    border-radius: 30px;
+    background: palevioletred;
+    color: white;
+    border: none;
+    display: flex;
+    margin: auto;
+    margin-top: 30px;
+    padding: 10px;
+    justify-content: center;
+    width: 300px;
+}
+
+.btn-conteudo:hover {
+    text-decoration: none;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+
+/* CONTEÚDO TELA DE LOGIN*/
+
+#login,
+#admin {
+    display: flex;
+    position: absolute;
+    padding: 50px;
+    padding-top: 150px;
+    width: 450px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+
+/* BOTÃO LOGIN CLIENTE E USUÁRIO - ENTRAR*/
+
+.btn-login,
+.btn-Voltar {
+    margin-top: 20px;
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+    background: palevioletred;
+    color: white;
+    border: none;
+    align-self: center;
+}
+
+
+/* BOTÃO LOGIN CLIENTE - CADASTRAR-SE*/
+
+.btn-cadastrar {
+    margin-top: 20px;
+    height: 40px;
+    width: 140px;
+    border-radius: 20px;
+    background: rgba(24, 143, 212, 0.781);
+    color: white;
+    border: none;
+    align-self: center;
+}
+
+
+/* BOTÃO LOGIN CLIENTE - CADASTRAR-SE*/
+
+.btn-login:hover,
+.btn-cadastrar:hover,
+.btn-Voltar:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    color: white;
+}
+
+
+/*BOTÃO DE CADASTRO - ALINHAMENTO*/
+
+.align-between {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.align-button {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+
+/* ALERT TELA DE LOGIN*/
+
+.alert-danger {
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+    height: 45px;
+    border-radius: 30px;
+    font-size: 12px;
+}
+
+
+/* FUNDO TELA*/
+
+#background-lista,
+#background-carrinho {
+    background-image: url('../img/Background-telas.jpg');
+    background-size: cover;
+}
+
+#container-lista,
+#container-carrinho {
+    background-color: rgba(251, 246, 247, 0.918);
+    color: rgba(24, 143, 212, 0.781);
+    padding-bottom: 40px;
+}
+
+
+/* BACKGROUND PAINEL ADMIN*/
+
+#background-admin {
+    background-image: url('../img/background-admin2.jpg');
+    /*Ajusta a img do tamanho da tela*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
