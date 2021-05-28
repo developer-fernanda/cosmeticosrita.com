@@ -15,8 +15,6 @@ function logaUsuario($conexao){
     
     $retorna_usuario = mysqli_fetch_assoc($resultado);
 
-    // var_dump($retorna_cliente);
-
     if($retorna_usuario == null){
         echo " <label class='alert alert-danger'>    
                 Dados incorretos, tente novamente!

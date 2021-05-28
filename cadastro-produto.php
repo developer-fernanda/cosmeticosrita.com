@@ -131,12 +131,10 @@ verificaSeUsuarioEstaLogado();
                             <td> <?php echo $dado['descricao_produto']; ?> </td>
                             <td> <?php echo $dado['preco_produto']; ?> </td>
                             <td> 
-                                <img src="assets/img/<?php echo $dado['foto_produto']; ?>" width='50px' heigth='50px'>
+                                <img src="assets/img/produtos<?php echo $dado['foto_produto']; ?>" width='50px' heigth='50px'>
                             </td>
 
                             <td class="text-center ">
-                                <!-- <a href="#" role="button" class="mx-3">
-                                    <i class="fas fa-pencil-alt" style="color:palevioletred ; font-size: 30px;"></i> </a> -->
                                 <!--Nesta linha, a variavel id_produto está recendo a variavel $dado['id_produto'], que já contém o Id de cada produto-->
                                 <a href="cadastro-produto.php?id_produto=<?php echo $dado['id_produto']; ?>" role="button">
                                     <i class="far fa-trash-alt" style="color:palevioletred ; font-size: 30px;"></i> </a>

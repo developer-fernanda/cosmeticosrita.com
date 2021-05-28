@@ -16,7 +16,7 @@ include("logica-cad-cliente.php");
 </head>
 
 <body>
-    <div class="container-fluid" id="background-login">
+    <div class="container-fluid" id="background-cadastro">
 
         <section id="login">
 
@@ -25,8 +25,6 @@ include("logica-cad-cliente.php");
                 <label for="txtnome_cliente"> Nome </label>
                 <input type="text" class="form-control" name="txtnome_cliente" placeholder="Seu usuário" required>
 
-
-
                 <label for="txtemail_cliente" class="mt-3"> E-mail </label>
                 <input type="email" class="form-control" name="txtemail_cliente" placeholder="Seu melhor email" required>
 
@@ -34,7 +32,7 @@ include("logica-cad-cliente.php");
                 <input type="password" class="form-control" name="txtsenha_cliente" placeholder="Sua senha" required>
 
                 <div class="align-between">
-                    <a href="login-cliente.php" class="btn btn-Voltar pt-2">Voltar</a>
+                    <a href="index.php" class="btn btn-Voltar pt-2">Voltar</a>
                     <button class="btn-cadastrar" type="submit" value="entrar">Cadastrar-se</button>
                 </div>
 

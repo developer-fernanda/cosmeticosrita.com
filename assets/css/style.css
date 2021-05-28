@@ -3,11 +3,34 @@ body {
 }
 
 
-/* BACKGROUND PERMISSÃO DE ACESSO E LOGIN*/
+/*******************************************************************************************
+******************************  TELAS DE LOGIN *********************************************
+*******************************************************************************************/
+
+
+/* BACKGROUND PERMISSÃO DE ACESSO E LOGIN CLIENTE E USUÁRIO*/
 
 #background-principal,
 #background-login {
-    background-image: url('../img/background-login.jpg');
+    background-image: url('../img/background/background-login.jpg');
+    /*Ajusta a img do tamanho da tela*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* LOGIN NOVO CADASTRO*/
+
+#background-cadastro {
+    background-image: url('../img/background/background-cadastro.jpg');
     /*Ajusta a img do tamanho da tela*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -145,7 +168,7 @@ body {
 
 #background-lista,
 #background-carrinho {
-    background-image: url('../img/Background-telas.jpg');
+    background-image: url('../img/background/Background-telas.jpg');
     background-size: cover;
 }
 
@@ -157,19 +180,67 @@ body {
 }
 
 
-/* BACKGROUND PAINEL ADMIN*/
+/*******************************************************************************************
+******************************  NAV E FOTO DE FUNDO ****************************************
+*******************************************************************************************/
 
-#background-admin {
-    background-image: url('../img/background-admin2.jpg');
-    /*Ajusta a img do tamanho da tela*/
+#header {
+    background-image: url(../img/background/background-index.jpg);
+    color: white;
+    padding-bottom: 50px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+}
+
+#navegacao>li>a:hover {
+    border-bottom: 1px #fafafa solid;
+}
+
+
+/*CONTATO NAV*/
+
+#contato {
+    border-radius: 25px;
+    color: #fff;
+    background-color: rgba(72, 166, 221, 0.781);
+}
+
+#contato:hover {
+    border-bottom: 0px !important;
+    color: #fff;
+    background-color: palevioletred;
+}
+
+
+/*LINKS NAV*/
+
+#link-header>a {
+    border-radius: 25px;
+    color: #fff;
+    background-color: rgba(72, 166, 221, 0.781);
+}
+
+#link-header>a:hover {
+    color: #fff;
+    background-color: palevioletred;
+}
+
+.btn-cad {
+    border-radius: 25px;
+    color: #fff;
+    background-color: rgba(72, 166, 221, 0.781);
+    padding: 10px;
+}
+
+.btn-cad:hover {
+    border-radius: 25px;
+    text-decoration: none;
+    color: #fff;
+    background-color: palevioletred;
+}
+
+#frase {
+    padding: 115px;
 }

@@ -23,4 +23,4 @@ $delete_carrinho = "delete from carrinho where id_carrinho = '$id_carrinho' and 
 
 $resultado = mysqli_query($conexao, $delete_carrinho);
 
-header('location:consultar_carrinho.php');
+header('location:consultar-carrinho.php');

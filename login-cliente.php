@@ -29,10 +29,12 @@ include("logica-login-cliente.php");
                 <input type="password" class="form-control" name="txtsenha_cliente" placeholder="Sua senha">
 
                 <div class="align-between" >
-                    <button class="btn-login" type="submit" value="entrar">Entrar</button>
-                    <a href="cadastro-cliente.php" class="btn btn-cadastrar pt-2">Novo Cadasto</a>
+                <a href="index.php" class="btn btn-Voltar pt-2 mr-1">Voltar</a>
+                  <button class="btn-login" type="submit" value="entrar">Entrar</button>
                 </div>
-
+                <div class="text-center mt-5" >
+                <a href="cadastro-cliente.php" class="btn btn-cadastrar pt-2 mr-1">Novo Cadasto</a>    
+                </div>
                 <?php
                     if ($_POST){
                         logaCliente($conexao);
