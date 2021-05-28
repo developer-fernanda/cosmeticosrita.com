@@ -35,30 +35,24 @@ $total_carrinho = mysqli_fetch_assoc($resultado_total);
 </head>
 
 <body id="background-carrinho">
-    <div class="container"  id="container-carrinho">
+    <div class="container" id="container-carrinho">
         <div class="row m-5">
-            <div class="col-md-12 mt-4">
-                <div class="d-flex text-center mt-5 mb-2 mr-2">
-                    <h2 class="ml-2" style="color: palevioletred;"> <i class="fas fa-shopping-cart"></i> Consulte seu Carrinho | <a href="logout-cliente.php" style="color:rgba(72, 166, 221, 0.781); text-decoration: none;">Sair</a></h2>
-                </div>
-                <div class="d-flex justify-content-between mt-5 mb-2 mr-2">
-                    <div class="form-row col-md-6">
-                        <div class="form-group col-md-3">
-                            <label for="exampleInputTotal"> Valor Total</label>
-                            <input type="text" class="form-control" name="txttotal" value='<?php echo number_format($total_carrinho['total_carrinho'], 2); ?>' readonly>
-                        </div>
-                    </div>
+            <!--CABECALHO-->
+            <div class="col-lg-12 mt-5">
+                <h2 class="ml-2" style="color: palevioletred;"> <i class="fas fa-shopping-cart"></i> Consulte seu Carrinho | <a href="logout-cliente.php" style="color:rgba(72, 166, 221, 0.781); text-decoration: none;">Sair</a></h2>
+            </div>
+            <!--VALOR TOTAL -->
+            <div class="col-md-12 text-center">
+                <h4 class="mt-4">O valor total dos produtos é de: R$ <?php echo number_format($total_carrinho['total_carrinho'], 2); ?></h4>
+            </div>
+            <!--VOLTAR-->
+            <div class="col-lg-12 d-flex justify-content-end">
+                <a href="lista-produto.php" class="btn mb-4" role="button" style="background-color: palevioletred; color:white; border-radius: 30px; height:40px;"> Voltar </a>
+            </div>
 
-                    <div style="margin-top: 30px;">
-                        <a href="lista-produto.php" class="btn " role="button" style="background-color: palevioletred; color:white; border-radius: 30px;"> Voltar </a>
-                        <a target="_blank"href="relatorio_venda.php?id_venda=<?php echo $id_venda; ?>" class="btn " role="button" style="background-color: rgba(72, 166, 221, 0.781); color:white; border-radius: 30px;">
-                        <i class="fas fa-print"></i> Imprimir </a>
-                    </div>
-
-                </div>
-
-                <!--Inicio da Tabela-->
-                <table class="table table-borderless table-responsive-md table-hover text-center" >
+            <div class="col-md-12">
+                <!--INICIO DA TABELA-->
+                <table class="table table-borderless table-responsive-md table-hover text-center">
                     <thead>
                         <tr style="border-top: 1px solid #C0C0C0; border-bottom: 1px solid #C0C0C0; color: #4F4F4F">
                             <th>PRODUTO</th>
@@ -69,7 +63,7 @@ $total_carrinho = mysqli_fetch_assoc($resultado_total);
                         </tr>
                     </thead>
 
-               <!--Estrutura de repetição, que vai executar de acordo com a quantidade de registros armazenados no fetch_array-->
+                    <!--Estrutura de repetição, que vai executar de acordo com a quantidade de registros armazenados no fetch_array-->
                     <?php while ($lista_carrinho = mysqli_fetch_assoc($resultado)) { ?>
                         <!--Organiza os dados em formato de array-->
                         <tbody class="text-center">
@@ -83,8 +77,8 @@ $total_carrinho = mysqli_fetch_assoc($resultado_total);
                                 </td>
                                 <td class="text-center">
                                     <a href="deleta_produto_carrinho.php?id_carrinho=<?php echo $lista_carrinho['id_carrinho']; ?>" role="button">
-                                    <i class="far fa-trash-alt" style="color:palevioletred ; font-size: 30px;"></i> </a>
-                                </td>   
+                                        <i class="far fa-trash-alt" style="color:palevioletred ; font-size: 30px;"></i> </a>
+                                </td>
                             </tr>
                         </tbody>
                     <?php } ?>

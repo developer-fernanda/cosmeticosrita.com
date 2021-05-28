@@ -1,7 +1,5 @@
-//terminar essa tela
-
 <?php
-include ("conexao.php");
+include('conexao.php');
 
 $nome=$_POST['txtcliente'];
 $obs=$_POST['txtobs'];

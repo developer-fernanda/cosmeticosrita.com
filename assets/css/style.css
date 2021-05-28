@@ -1,5 +1,90 @@
+/*FONTE */
+
 body {
     font-family: 'Lato', sans-serif;
+}
+
+
+/*******************************************************************************************
+******************************  NAV E FOTO DE FUNDO ****************************************
+*******************************************************************************************/
+
+
+/*IMAGEM*/
+
+#header {
+    background-image: url(../img/background/background-index.jpg);
+    color: white;
+    padding-bottom: 50px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 728px;
+    /* background-size: 100% 100%; */
+}
+
+#navegacao>li>a:hover {
+    border-bottom: 1px #fafafa solid;
+}
+
+
+/*FRASE H1*/
+
+#frase>.col-md-12>h1 {
+    padding-top: 100px;
+    color: rgb(250, 240, 240);
+}
+
+
+/*FRASE H2*/
+
+#frase>.col-md-12>h2 {
+    padding-top: 100px;
+    color: #fff;
+}
+
+
+/*BTN - CADASTRAR */
+
+.btn-cad {
+    border-radius: 25px;
+    color: #fff;
+    background-color: rgba(72, 166, 221, 0.781);
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.btn-cad:hover {
+    border-radius: 25px;
+    text-decoration: none;
+    color: #fff;
+    background-color: palevioletred;
+}
+
+
+/*CONTATO NAV*/
+
+#contato,
+#link-header>a {
+    border-radius: 25px;
+    color: #fff;
+    background-color: rgba(72, 166, 221, 0.781);
+}
+
+#contato:hover {
+    border-bottom: 0px !important;
+    color: #fff;
+    background-color: palevioletred;
+}
+
+
+/*LINKS NAV*/
+
+#link-header>a:hover {
+    color: #fff;
+    background-color: palevioletred;
 }
 
 
@@ -8,29 +93,12 @@ body {
 *******************************************************************************************/
 
 
-/* BACKGROUND PERMISSÃO DE ACESSO E LOGIN CLIENTE E USUÁRIO*/
+/* BACKGROUND PERMISSÃO DE ACESSO
+ ****LOGIN CLIENTE E USUÁRIO****/
 
 #background-principal,
 #background-login {
     background-image: url('../img/background/background-login.jpg');
-    /*Ajusta a img do tamanho da tela*/
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-}
-
-
-/* LOGIN NOVO CADASTRO*/
-
-#background-cadastro {
-    background-image: url('../img/background/background-cadastro.jpg');
     /*Ajusta a img do tamanho da tela*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -78,6 +146,24 @@ body {
     text-decoration: none;
     color: white;
     background: rgba(0, 0, 0, 0.6);
+}
+
+
+/* LOGIN NOVO CADASTRO DE CLIENTE*/
+
+#background-cadastro {
+    background-image: url('../img/background/background-cadastro.jpg');
+    /*Ajusta a img do tamanho da tela*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
 
 
@@ -164,83 +250,23 @@ body {
 }
 
 
-/* FUNDO TELA*/
+/* BACKGROUND LISTA DE PRODUTOS */
 
 #background-lista,
 #background-carrinho {
     background-image: url('../img/background/Background-telas.jpg');
-    background-size: cover;
-}
-
-#container-lista,
-#container-carrinho {
-    background-color: rgba(251, 246, 247, 0.918);
-    color: rgba(24, 143, 212, 0.781);
-    padding-bottom: 40px;
-}
-
-
-/*******************************************************************************************
-******************************  NAV E FOTO DE FUNDO ****************************************
-*******************************************************************************************/
-
-#header {
-    background-image: url(../img/background/background-index.jpg);
-    color: white;
-    padding-bottom: 50px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 
-#navegacao>li>a:hover {
-    border-bottom: 1px #fafafa solid;
-}
 
+/* CONTAINER LISTA DE PRODUTOS */
 
-/*CONTATO NAV*/
-
-#contato {
-    border-radius: 25px;
-    color: #fff;
-    background-color: rgba(72, 166, 221, 0.781);
-}
-
-#contato:hover {
-    border-bottom: 0px !important;
-    color: #fff;
-    background-color: palevioletred;
-}
-
-
-/*LINKS NAV*/
-
-#link-header>a {
-    border-radius: 25px;
-    color: #fff;
-    background-color: rgba(72, 166, 221, 0.781);
-}
-
-#link-header>a:hover {
-    color: #fff;
-    background-color: palevioletred;
-}
-
-.btn-cad {
-    border-radius: 25px;
-    color: #fff;
-    background-color: rgba(72, 166, 221, 0.781);
-    padding: 10px;
-}
-
-.btn-cad:hover {
-    border-radius: 25px;
-    text-decoration: none;
-    color: #fff;
-    background-color: palevioletred;
-}
-
-#frase {
-    padding: 115px;
+#container-lista,
+#container-carrinho {
+    background-color: rgba(251, 246, 247, 0.918);
+    color: rgba(24, 143, 212, 0.781);
+    padding-bottom: 40px;
 }

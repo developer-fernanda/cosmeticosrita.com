@@ -52,78 +52,63 @@ $lista_produto = @mysqli_query($conexao, $select_produto);
 <body id="background-lista">
     <div class="container" id="container-lista">
         <div class="row m-5">
-            <div class="col-md-12 mt-4">
-                <div class="d-flex justify-content-between mt-5">
-                    <div>
-                        <h2 class="ml-2" style="color: palevioletred;"> <i class="fas fa-leaf"></i> Venda de Produtos | <a href="logout-cliente.php" style="color:rgba(72, 166, 221, 0.781); text-decoration: none;">Sair</a></h2>
-                    </div>
-                    <!--Inicio Pesquisar-->
-                    <!-- <ul class="list-inline">
-                        <li class="list-inline-item">
-                            <input type="text" class="form-control" name="txtpesquisa" id="exampleInputPesquisar" aria-describedby="pesquisa" placeholder="Pesquisa" style="width: 350px; border-radius: 30px;">
-                        </li>
-                        <li class="list-inline-item">
-                            <button type="submit" class="btn" style="background-color :palevioletred; color:white; border-radius: 30px;"><i class="fas fa-search"></i> Pesquisar</button>
-                        </li>
-                    </ul> -->
-                    <!--Fim dos botões-->
-                </div>
-
-                <div class="d-flex justify-content-between mt-5 mb-2 mr-2">
-                    <div class="form-row col-md-6">
-                        <div class="form-group col-md-2">
-                            <label for="exampleInputCodigo">Código</label>
-                            <input type="text" class="form-control" name="txtcodigo" value='<?php echo $dados_cliente['id_cliente']; ?>' readonly>
-                        </div>
-                        <div class="form-group col-md-9">
-                            <label for="exampleInputNome">Nome do Cliente</label>
-                            <input type="text" class="form-control" name="txtdesc" value='<?php echo $dados_cliente['nome_cliente']; ?>' readonly>
-                        </div>
-                    </div>
-
-                    <div style="margin-top: 30px;">
-                        <a href="consultar-carrinho.php" class="btn m-1" style="border-radius:25px; font-size: 16px; background-color:palevioletred; color:white;" role="button">
-                            <i class="fas fa-shopping-cart"></i> Carrinho (<?php echo $dados_carrinho['quantidade'] ?>) </a>
-                        <a href="lista-produto.php" class="btn m-1" style="border-radius:25px; font-size: 16px; background-color:palevioletred; color:white;" role="button">
-                            <i class="far fa-clone"></i> Card </a>
-                    </div>
-                </div>
-                <!--Inicio da Tabela-->
-                <table class="table table-borderless table-responsive-md table-hover" id="table_lista_produtos">
-                    <thead>
-                        <tr style="border-top: 1px solid #C0C0C0; border-bottom: 1px solid #C0C0C0; color: #4F4F4F" class="text-center">
-                            <th>CÓDIGO</th>
-                            <th>NOME</th>
-                            <th>DESCRIÇÃO DO PRODUTO</th>
-                            <th>PREÇO</th>
-                            <th>FOTO</th>
-                            <th>CARRINHO</th>
-                        </tr>
-                    </thead>
-                    <!--Estrutura de repetição, que vai executar de acordo com a quantidade de registros armazenados no fetch_array-->
-                    <?php while ($dado = $lista_produto->fetch_array()) { ?>
-                        <!--Organiza os dados em formato de array-->
-                        <tbody>
-                            <tr style="border-top: 1px solid #C0C0C0; border-bottom: 1px solid #C0C0C0; color: #4F4F4F" class="text-center">
-                                <!--ele localiza pela nome da variavél-->
-                                <td> <?php echo $dado['id_produto']; ?> </td>
-                                <td> <?php echo $dado['nome_produto']; ?> </td>
-                                <td> <?php echo $dado['descricao_produto']; ?> </td>
-                                <td> <?php echo $dado['preco_produto']; ?> </td>
-                                <td>
-                                    <img src="assets/img/produtos/<?php echo $dado['foto_produto']; ?>" width='50px' heigth='50px'>
-                                </td>
-                                <td>
-                                    <a href="cad_carrinho.php?id_produto=<?php echo $dado['id_produto']; ?>&id_cliente=<?php echo $id_cliente; ?>" role="button">
-                                        <i class="fas fa-cart-plus" style="color:palevioletred ; font-size: 35px;"></i> </a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    <?php } ?>
-                    <!--Fim da Tabela-->
-                </table>
+            <!--CABECALHO-->
+            <div class="col-lg-12 mt-5 mb-3">
+                <h2 class="ml-2" style="color: palevioletred;"> <i class="fas fa-leaf"></i> Venda de Produtos | <a href="logout-cliente.php" style="color:rgba(72, 166, 221, 0.781); text-decoration: none;">Sair</a></h2>
             </div>
+            <!--NOME DO CLIENTE-->
+            <div class="col-lg-6">
+                <h4 style="color:rgba(24, 143, 212, 0.781);"> Olá, <?php echo $dados_cliente['nome_cliente']; ?>! </h4>
+            </div>
+            <!--ICONES-->
+            <div class="col-lg-6 d-flex justify-content-end">
+                <a href="consultar-carrinho.php" class="btn m-1" style="border-radius:25px; font-size: 16px; background-color:palevioletred; color:white;" role="button">
+                    <i class="fas fa-shopping-cart"></i> (<?php echo $dados_carrinho['quantidade'] ?>) </a>
+                <a href="lista-produto.php" class="btn m-1" style="border-radius:25px; font-size: 16px; background-color:palevioletred; color:white;" role="button">
+                    <i class="fas fa-exchange-alt"></i> </a>
+                <a href="lista-itens-produto.php" class="btn m-1" style="border-radius:25px; font-size: 16px; background-color:rgba(24, 143, 212, 0.781); color:white;" role="button">
+                    Finalizar </a>
+            </div>
+            <!--PESQUISAR-->
+            <div class="col-lg-12 mt-3 mb-5 d-flex ">
+                <input type="text" class="form-control" name="txtpesquisa" aria-describedby="pesquisa" placeholder="  Digite o nome do produto" style="border-radius: 30px;">
+                <button type="submit" class="btn ml-3" style="background-color:palevioletred; color:white; border-radius: 30px;"><i class="fas fa-search"></i> Pesquisar</button>
+            </div>
+            <!--TABELA-->
+            <table class="table table-borderless table-responsive-md table-hover" id="table_lista_produtos">
+                <thead>
+                    <tr style="border-top: 1px solid #C0C0C0; border-bottom: 1px solid #C0C0C0; color: #4F4F4F" class="text-center">
+                        <th>CÓDIGO</th>
+                        <th>NOME</th>
+                        <th>DESCRIÇÃO DO PRODUTO</th>
+                        <th>PREÇO</th>
+                        <th>FOTO</th>
+                        <th>CARRINHO</th>
+                    </tr>
+                </thead>
+                <!--Estrutura de repetição, que vai executar de acordo com a quantidade de registros armazenados no fetch_array-->
+                <?php while ($dado = $lista_produto->fetch_array()) { ?>
+                    <!--Organiza os dados em formato de array-->
+                    <tbody>
+                        <tr style="border-top: 1px solid #C0C0C0; border-bottom: 1px solid #C0C0C0; color: #4F4F4F" class="text-center">
+                            <!--ele localiza pela nome da variavél-->
+                            <td> <?php echo $dado['id_produto']; ?> </td>
+                            <td> <?php echo $dado['nome_produto']; ?> </td>
+                            <td> <?php echo $dado['descricao_produto']; ?> </td>
+                            <td> <?php echo $dado['preco_produto']; ?> </td>
+                            <td>
+                                <img src="assets/img/produtos/<?php echo $dado['foto_produto']; ?>" width='50px' heigth='50px'>
+                            </td>
+                            <td>
+                                <a href="logica-cad-carrinho.php?id_produto=<?php echo $dado['id_produto']; ?>&id_cliente=<?php echo $id_cliente; ?>" role="button">
+                                    <i class="fas fa-cart-plus" style="color:palevioletred ; font-size: 35px;"></i> </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                <?php } ?>
+            </table>
         </div>
+    </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -27,21 +27,21 @@ include('conexao.php');
             </button>
             <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
                 <div class="container d-flex justify-content-between">
-                    <ul class="list-unstyled d-none d-lg-block" style="color: white;">
+                    <ul class="list-unstyled" style="color: white;">
                         <li>
                             <h3><i class="fas fa-leaf"></i> Rita Presentes</h3>
                         </li>
                     </ul>
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navegacao">
+                    <ul class="navbar-nav me-auto" id="navegacao">
                         <li class="nav-item px-3 ">
                             <a target="_blank" href="https://clubeami.com.br/mags/2051-224724/1" id="contato" class="btn"><i class="fab fa-envira"></i> NATURA </a>
                         </li>
                         <li class="nav-item px-3 ">
-                            <a target="_blank"  href="https://clubeami.com.br/mags/2120-224724/1" id="contato" class="btn"><i class="fab fa-envira"></i> BOTICÁRIO </a>
+                            <a target="_blank" href="https://clubeami.com.br/mags/2120-224724/1" id="contato" class="btn"><i class="fab fa-envira"></i> BOTICÁRIO </a>
                         </li>
                     </ul>
                     <form class="d-flex">
-                        <ul class="navbar-nav mx-auto d-none d-lg-block ">
+                        <ul class="navbar-nav mx-auto">
                             <li class="nav-item px-4" id="link-header">
                                 <a href="login-cliente.php" class="btn"> lOGIN
                                 </a>
@@ -56,11 +56,13 @@ include('conexao.php');
             </div>
         </nav>
         <div class="row" id="frase">
-            <div class="col-md text-center mt-5 mb-5">
-                <h1> Seja bem-vindo! <br> Faça seu cadastro e <br> aproveite as promoções! </h1> <br>
-                <a href="cadastro-cliente.php" class="btn-cad">
+            <div class="col-md-12 text-center">
+                <h1> Bem-vindo!</h1>
+                <h2> Faça seu cadastro e <br> aproveite as promoções! </h2>
+                <a href="cadastro-cliente.php" class="btn btn-cad" style="border-radius: 25px;">
                     <i class="fab fa-whatsapp"></i> CADASTRAR
                 </a>
+
             </div>
         </div>
     </header>

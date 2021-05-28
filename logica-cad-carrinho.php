@@ -1,6 +1,6 @@
 <?php 
 
-include "conexao.php";
+include('conexao.php');
 
 $id_produto = $_GET['id_produto'];
 $id_cliente = $_GET['id_cliente'];

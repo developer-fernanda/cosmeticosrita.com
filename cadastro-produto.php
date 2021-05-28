@@ -131,7 +131,7 @@ verificaSeUsuarioEstaLogado();
                             <td> <?php echo $dado['descricao_produto']; ?> </td>
                             <td> <?php echo $dado['preco_produto']; ?> </td>
                             <td> 
-                                <img src="assets/img/produtos<?php echo $dado['foto_produto']; ?>" width='50px' heigth='50px'>
+                                <img src="assets/img/produtos/<?php echo $dado['foto_produto']; ?>" width='50px' heigth='50px'>
                             </td>
 
                             <td class="text-center ">
