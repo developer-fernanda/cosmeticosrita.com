@@ -34,7 +34,7 @@ body {
 
 #frase>.col-md-12>h1 {
     padding-top: 100px;
-    color: rgb(250, 240, 240);
+    color: rgba(0, 0, 0, 0.705);
 }
 
 
@@ -42,7 +42,7 @@ body {
 
 #frase>.col-md-12>h2 {
     padding-top: 100px;
-    color: #fff;
+    color: rgba(0, 0, 0, 0.705);
 }
 
 
@@ -52,7 +52,7 @@ body {
     border-radius: 25px;
     color: #fff;
     background-color: rgba(72, 166, 221, 0.781);
-    margin-top: 30px;
+    margin-top: 70px;
     padding: 10px;
 }
 

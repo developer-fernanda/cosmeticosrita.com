@@ -47,10 +47,12 @@ $total_carrinho = mysqli_fetch_assoc($resultado_total);
             </div>
             <!--VOLTAR-->
             <div class="col-lg-12 d-flex justify-content-end">
-                <a href="lista-produto.php" class="btn mb-4" role="button" style="background-color: palevioletred; color:white; border-radius: 30px; height:40px;"> Voltar </a>
+                <a href="lista-produto.php" class="btn" role="button" style="background-color: palevioletred; color:white; border-radius: 30px; height:40px;"> Voltar </a>
+                <a href="logica-cad-venda.php" class="btn ml-2" style="border-radius:25px; font-size: 16px; background-color:rgba(24, 143, 212, 0.781); color:white;" role="button">
+                    Finalizar </a>
             </div>
 
-            <div class="col-md-12">
+            <div class="col-md-12 mt-4">
                 <!--INICIO DA TABELA-->
                 <table class="table table-borderless table-responsive-md table-hover text-center">
                     <thead>
@@ -76,7 +78,7 @@ $total_carrinho = mysqli_fetch_assoc($resultado_total);
                                     <img src="assets/img/produtos/<?php echo $lista_carrinho['foto_produto']; ?>" width='50px' heigth='50px'>
                                 </td>
                                 <td class="text-center">
-                                    <a href="deleta_produto_carrinho.php?id_carrinho=<?php echo $lista_carrinho['id_carrinho']; ?>" role="button">
+                                    <a href="logica-deleta-prod-carrinho.php?id_carrinho=<?php echo $lista_carrinho['id_carrinho']; ?>" role="button">
                                         <i class="far fa-trash-alt" style="color:palevioletred ; font-size: 30px;"></i> </a>
                                 </td>
                             </tr>

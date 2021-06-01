@@ -3,10 +3,8 @@
 include("conexao.php");
 include("logica-login-usuario.php");
 include("logica-cad-produto.php");
-include("deleta-produto-cad-lista.php");
 verificaSeUsuarioEstaLogado();
 ?>
-
 
 <!DOCTYPE html>
 <html lang="br">
@@ -28,30 +26,28 @@ verificaSeUsuarioEstaLogado();
             <div class="col-md-12 mt-5">
                 <div class="d-flex justify-content-between">
                     <h2 style="color: palevioletred;"> <i class="fas fa-leaf"></i> Cadastro de Produtos | <a href="logout-usuario.php" style="color:rgba(72, 166, 221, 0.781); text-decoration: none;">Sair</a></h2>
-                    <?php 
+                    <?php
 
-                    if(isset($_GET['id_produto'])){
+                    if (isset($_GET['id_produto'])) {
                         deleta_produto($conexao);
-                    }           
+                    }
 
                     if ($_POST) {
                         cadastroProduto($conexao);
                     }
 
-                    if(isset($_GET['cadastro_sucesso'])){
-                        if($_GET['cadastro_sucesso']==1){
+                    if (isset($_GET['cadastro_sucesso'])) {
+                        if ($_GET['cadastro_sucesso'] == 1) {
                             echo '<div class="alert alert-success text-center" role="alert" style="height: 60px; width: 350px;">
                                     <i class="fas fa-leaf h5"></i> Produto cadastrado com sucesso!
                                 </div>';
-                        }
-                        else{
-                            echo'<div class="alert alert-warning text-center" role="alert" style="height: 60px; width: 350px;">
+                        } else {
+                            echo '<div class="alert alert-warning text-center" role="alert" style="height: 60px; width: 350px;">
                                     <i class="fas fa-leaf h5"></i> Produto não cadastrado!
                                 </div>';
                         }
-                   
-                   }
-                               
+                    }
+
                     $listaProdutos = dadosProduto($conexao);
                     ?>
                 </div>
@@ -59,10 +55,10 @@ verificaSeUsuarioEstaLogado();
                     <div>
                         <h4 class="mt-3">Olá, <?php echo pegaNomeDoUsuarioLogado(); ?>! </h4>
                     </div>
-
+                    <!-- CHAMA O MODAL -->
                     <div class="mt-2"><button class="btn" style="border-radius:25px; background-color:rgba(72, 166, 221, 0.781); color:white; " data-toggle="modal" data-target="#idmodal
                     "><i class="fas fa-plus"></i> Cadastro </button>
-
+                        <!--BOTÃO DE ATUALIZAR-->
                         <a href="cadastro-produto.php" class="btn" style="border-radius:25px; background-color:rgba(72, 166, 221, 0.781); color:white;"> <i class="fas fa-redo-alt"></i> Atualizar</a>
                     </div>
                 </div>
@@ -130,7 +126,7 @@ verificaSeUsuarioEstaLogado();
                             <td> <?php echo $dado['nome_produto']; ?> </td>
                             <td> <?php echo $dado['descricao_produto']; ?> </td>
                             <td> <?php echo $dado['preco_produto']; ?> </td>
-                            <td> 
+                            <td>
                                 <img src="assets/img/produtos/<?php echo $dado['foto_produto']; ?>" width='50px' heigth='50px'>
                             </td>
 
@@ -148,7 +144,7 @@ verificaSeUsuarioEstaLogado();
         </div>
 
     </div>
-    </div>
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

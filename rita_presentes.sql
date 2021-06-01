@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 28-Maio-2021 às 02:48
+-- Tempo de geração: 01-Jun-2021 às 02:04
 -- Versão do servidor: 10.4.13-MariaDB
 -- versão do PHP: 7.4.8
 
@@ -32,15 +32,6 @@ CREATE TABLE `carrinho` (
   `id_produto` int(11) NOT NULL,
   `id_cliente` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Extraindo dados da tabela `carrinho`
---
-
-INSERT INTO `carrinho` (`id_carrinho`, `id_produto`, `id_cliente`) VALUES
-(59, 1, 2),
-(93, 1, 1),
-(94, 3, 1);
 
 -- --------------------------------------------------------
 
@@ -77,9 +68,24 @@ CREATE TABLE `item_venda` (
   `id_item_venda` int(11) NOT NULL,
   `id_produto` int(11) NOT NULL,
   `id_venda` int(11) NOT NULL,
-  `quantidade` int(11) NOT NULL,
+  `quantidade_item_venda` int(11) NOT NULL,
   `total_item_venda` decimal(9,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `item_venda`
+--
+
+INSERT INTO `item_venda` (`id_item_venda`, `id_produto`, `id_venda`, `quantidade_item_venda`, `total_item_venda`) VALUES
+(25, 2, 38, 1, '105.00'),
+(26, 15, 38, 1, '37.90'),
+(27, 14, 38, 1, '23.90'),
+(28, 17, 38, 1, '29.00'),
+(29, 12, 38, 1, '99.90'),
+(30, 6, 39, 1, '146.90'),
+(31, 1, 40, 1, '110.90'),
+(32, 15, 40, 1, '37.90'),
+(33, 18, 40, 1, '239.90');
 
 -- --------------------------------------------------------
 
@@ -116,8 +122,7 @@ INSERT INTO `produtos` (`id_produto`, `nome_produto`, `descricao_produto`, `prec
 (15, 'Sombra Mate Azul', 'Sombra Mate Compacta Azul pra meditar Intense', '37.90', 'SombraAzul.png'),
 (16, 'Batom Líquido Rose', 'Batom Líquido Cushion Rose Make B. Sun Hit 6ml', '49.90', 'BatomLiquidoRose.png'),
 (17, 'Batom Intense TOP', ' Batom Líquido Mate Top Intense', '29.00', 'BatomIntenseTop.png'),
-(18, 'Lily Absolu Eau De Parfum ', 'Válvula 75ml', '239.90', 'LilyAbsoluEau.png'),
-(19, 'Test', ' ', '0.00', '');
+(18, 'Lily Absolu Eau De Parfum ', 'Válvula 75ml', '239.90', 'LilyAbsoluEau.png');
 
 -- --------------------------------------------------------
 
@@ -150,6 +155,15 @@ CREATE TABLE `venda` (
   `data_venda` datetime NOT NULL,
   `total_venda` decimal(9,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `venda`
+--
+
+INSERT INTO `venda` (`id_venda`, `id_cliente`, `data_venda`, `total_venda`) VALUES
+(38, 1, '2021-05-31 21:02:12', '295.70'),
+(39, 2, '2021-05-31 21:02:35', '146.90'),
+(40, 3, '2021-05-31 21:03:06', '388.70');
 
 --
 -- Índices para tabelas despejadas
@@ -201,7 +215,7 @@ ALTER TABLE `venda`
 -- AUTO_INCREMENT de tabela `carrinho`
 --
 ALTER TABLE `carrinho`
-  MODIFY `id_carrinho` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
+  MODIFY `id_carrinho` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=161;
 
 --
 -- AUTO_INCREMENT de tabela `cliente`
@@ -213,13 +227,13 @@ ALTER TABLE `cliente`
 -- AUTO_INCREMENT de tabela `item_venda`
 --
 ALTER TABLE `item_venda`
-  MODIFY `id_item_venda` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_item_venda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT de tabela `produtos`
 --
 ALTER TABLE `produtos`
-  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
@@ -231,7 +245,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `venda`
 --
 ALTER TABLE `venda`
-  MODIFY `id_venda` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_venda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

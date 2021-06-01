@@ -9,7 +9,7 @@ function logaCliente($conexao){
     $email_cliente = $_POST['txtemail_cliente'];
     $senha_cliente =  $_POST['txtsenha_cliente'];
     
-    $select_cliente = "select * from cliente where email_cliente = '$email_cliente' and senha_cliente = '$senha_cliente'";
+    $select_cliente = "SELECT * FROM cliente WHERE email_cliente = '$email_cliente' AND senha_cliente = '$senha_cliente'";
     
         
     $resultado = mysqli_query($conexao, $select_cliente);

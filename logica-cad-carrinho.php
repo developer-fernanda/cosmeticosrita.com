@@ -5,7 +5,7 @@ include('conexao.php');
 $id_produto = $_GET['id_produto'];
 $id_cliente = $_GET['id_cliente'];
 
-$insert_carrinho = "insert into carrinho values (0, '$id_produto', '$id_cliente')";
+$insert_carrinho = "INSERT INTO carrinho VALUES (0, '$id_produto', '$id_cliente')";
 
 $resultado = mysqli_query($conexao, $insert_carrinho);
 

@@ -35,7 +35,6 @@ $lista_produto = @mysqli_query($conexao, $select_produto);
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="br">
 
@@ -66,16 +65,16 @@ $lista_produto = @mysqli_query($conexao, $select_produto);
                     <i class="fas fa-shopping-cart"></i> (<?php echo $dados_carrinho['quantidade'] ?>) </a>
                 <a href="lista-produto.php" class="btn m-1" style="border-radius:25px; font-size: 16px; background-color:palevioletred; color:white;" role="button">
                     <i class="fas fa-exchange-alt"></i> </a>
-                <a href="lista-itens-produto.php" class="btn m-1" style="border-radius:25px; font-size: 16px; background-color:rgba(24, 143, 212, 0.781); color:white;" role="button">
+                <a href="logica-cad-venda.php" class="btn m-1" style="border-radius:25px; font-size: 16px; background-color:rgba(24, 143, 212, 0.781); color:white;" role="button">
                     Finalizar </a>
             </div>
             <!--PESQUISAR-->
-            <div class="col-lg-12 mt-3 mb-5 d-flex ">
+            <!-- <div class="col-lg-12 mt-3 mb-5 d-flex ">
                 <input type="text" class="form-control" name="txtpesquisa" aria-describedby="pesquisa" placeholder="  Digite o nome do produto" style="border-radius: 30px;">
                 <button type="submit" class="btn ml-3" style="background-color:palevioletred; color:white; border-radius: 30px;"><i class="fas fa-search"></i> Pesquisar</button>
-            </div>
+            </div> -->
             <!--TABELA-->
-            <table class="table table-borderless table-responsive-md table-hover" id="table_lista_produtos">
+            <table class="table table-borderless table-responsive-md table-hover mt-4" id="table_lista_produtos">
                 <thead>
                     <tr style="border-top: 1px solid #C0C0C0; border-bottom: 1px solid #C0C0C0; color: #4F4F4F" class="text-center">
                         <th>CÓDIGO</th>

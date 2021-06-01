@@ -9,7 +9,7 @@ function cadastroProduto($conexao){
   $preco_produto = $_POST['txtpreco_produto'];
   $foto_produto = $_POST['txtfoto_produto'];
   
-  $insert_produto = "insert into produtos values (0, '$nome_produto', '$descricao_produto', '$preco_produto', '$foto_produto')";
+  $insert_produto = "INSERT INTO produtos VALUES (0, '$nome_produto', '$descricao_produto', '$preco_produto', '$foto_produto')";
   
   $resultado_insert = mysqli_query($conexao, $insert_produto);
   
