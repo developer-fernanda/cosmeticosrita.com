@@ -3,6 +3,7 @@
 include("conexao.php");
 include("logica-login-usuario.php");
 include("logica-cad-produto.php");
+include("logica-deleta-prod-lista.php");
 verificaSeUsuarioEstaLogado();
 ?>
 
@@ -54,11 +55,12 @@ verificaSeUsuarioEstaLogado();
                 <div class="d-flex justify-content-between mt-3 mb-3">
                     <div>
                         <h4 class="mt-3">Olá, <?php echo pegaNomeDoUsuarioLogado(); ?>! </h4>
-                    </div>
-                    <!-- CHAMA O MODAL -->
-                    <div class="mt-2"><button class="btn" style="border-radius:25px; background-color:rgba(72, 166, 221, 0.781); color:white; " data-toggle="modal" data-target="#idmodal
-                    "><i class="fas fa-plus"></i> Cadastro </button>
-                        <!--BOTÃO DE ATUALIZAR-->
+                    </div>   
+                    <div class="mt-2">
+                     <!-- CHAMA O MODAL -->
+                        <button class="btn" style="border-radius:25px; background-color:rgba(72, 166, 221, 0.781); color:white; " data-toggle="modal" data-target="#idmodal
+                        "><i class="fas fa-plus"></i> Cadastro </button>
+                    <!--BOTÃO DE ATUALIZAR-->
                         <a href="cadastro-produto.php" class="btn" style="border-radius:25px; background-color:rgba(72, 166, 221, 0.781); color:white;"> <i class="fas fa-redo-alt"></i> Atualizar</a>
                     </div>
                 </div>
@@ -95,6 +97,7 @@ verificaSeUsuarioEstaLogado();
                                         <button class="btn" class="close" data-dismiss="modal" aria-label="Close" style="border-radius:25px; background-color:palevioletred; color:white;">voltar</button>
 
                                     </div>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -114,7 +117,6 @@ verificaSeUsuarioEstaLogado();
                         <th>FOTO</th>
                         <th>DELETAR</th>
                     </tr>
-
                 </thead>
                 <!--Estrutura de repetição, que vai executar de acordo com a quantidade de registros armazenados no fetch_array-->
                 <?php while ($dado = $listaProdutos->fetch_array()) { ?>

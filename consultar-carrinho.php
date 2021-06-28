@@ -13,7 +13,9 @@ $select_carrinho = "select * from carrinho inner join produtos on produtos.id_pr
 $resultado = mysqli_query($conexao, $select_carrinho);
 
 //Total da compra
-$select_totalCarrinho = "Select sum(preco_produto * 1) as total_carrinho from carrinho inner join produtos on produtos.id_produto = carrinho.id_produto inner join cliente on cliente.id_cliente = carrinho.id_cliente where email_cliente =  '$recebe_email' ";
+$select_totalCarrinho = "SELECT SUM(preco_produto * 1) AS total_carrinho FROM carrinho 
+INNER JOIN produtos ON produtos.id_produto = carrinho.id_produto 
+INNER JOIN cliente ON cliente.id_cliente = carrinho.id_cliente WHERE email_cliente =  '$recebe_email' ";
 
 $resultado_total = mysqli_query($conexao, $select_totalCarrinho);
 $total_carrinho = mysqli_fetch_assoc($resultado_total);

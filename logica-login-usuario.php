@@ -9,7 +9,7 @@ function logaUsuario($conexao){
     $nome_usuario = $_POST['txtnome_usuario'];
     $senha_usuario =  $_POST['txtsenha_usuario'];
     
-    $select_usuario = "select * from usuario where nome_usuario = '$nome_usuario' and senha_usuario = '$senha_usuario'";
+    $select_usuario = "SELECT * FROM usuario WHERE nome_usuario = '$nome_usuario' AND senha_usuario = '$senha_usuario'";
             
     $resultado = mysqli_query($conexao, $select_usuario);
     

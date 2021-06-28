@@ -20,7 +20,7 @@ include("logica-cad-cliente.php");
 
         <section id="login">
 
-            <form name="frmlogin" method="post">
+            <form name="frmlogin" method="post" >
                 <h1 class="mb-3">Cadastro de cliente</h1>
                 <label for="txtnome_cliente"> Nome </label>
                 <input type="text" class="form-control" name="txtnome_cliente" placeholder="Seu usuário" required>
